@@ -1,5 +1,5 @@
 {% set name = "pygwalker" %}
-{% set version = "0.1.4.6" %}
+{% set version = "0.1.4.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pygwalker-{{ version }}.tar.gz
-  sha256: befae03ed94ac40c66ab87283c8d4ee567598d444c0ea375c3dd8dccb686f65a
+  sha256: e6ebf5be63ae96c8493953b53629f8e9017697e0d76a0cf5e06960ca277b38cb
 
 build:
   noarch: python
@@ -42,4 +42,4 @@ about:
 extra:
   recipe-maintainers:
     - gabrielcnr
- 
+
