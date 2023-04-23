@@ -1,5 +1,5 @@
 {% set name = "pygwalker" %}
-{% set version = "0.1.6.1" %}
+{% set version = "0.1.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pygwalker-{{ version }}.tar.gz
-  sha256: cb341e6fafd036fb413cfa4bbedb9d05afea84833805669d4b3f2463b8d3f6a5
+  sha256: 351ff730e0587b1722affccebec7dab52bfe8143faf005ab0ea6b76cd92f020d
 
 build:
   noarch: python
@@ -26,7 +26,7 @@ requirements:
     - jinja2
     - pandas
     - typing_extensions
-    - requests
+    - aiohttp
 
 test:
   imports:
@@ -45,3 +45,4 @@ about:
 extra:
   recipe-maintainers:
     - gabrielcnr
+    - Asm-Def

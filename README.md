@@ -143,5 +143,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@Asm-Def](https://github.com/Asm-Def/)
 * [@gabrielcnr](https://github.com/gabrielcnr/)
 
