@@ -27,6 +27,7 @@ requirements:
     - pandas
     - typing_extensions
     - aiohttp
+    - astor
 
 test:
   imports:
@@ -46,3 +47,4 @@ extra:
   recipe-maintainers:
     - gabrielcnr
     - Asm-Def
+    - longxiaofei
