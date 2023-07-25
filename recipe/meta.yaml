@@ -26,8 +26,9 @@ requirements:
     - jinja2
     - pandas
     - typing_extensions
-    - aiohttp
     - astor
+    - ipywidgets
+    - pydantic
 
 test:
   imports:
