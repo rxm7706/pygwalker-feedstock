@@ -1,5 +1,5 @@
 {% set name = "pygwalker" %}
-{% set version = "0.2.1" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pygwalker-{{ version }}.tar.gz
-  sha256: dd0e51c299898f24e32b309203c43bb30ca0cd755a6d01809418c72092667af0
+  sha256: 615b2d9f46bf3ff852deec6761a345bdcad6ea9dd65dc57786c0ed6619db30f7
 
 build:
   noarch: python
@@ -29,6 +29,8 @@ requirements:
     - astor
     - ipywidgets
     - pydantic
+    - psutil
+    - duckdb
 
 test:
   imports:
