@@ -30,7 +30,7 @@ requirements:
     - ipywidgets
     - pydantic
     - psutil
-    - duckdb
+    - python-duckdb
     - pyarrow
 
 test:
