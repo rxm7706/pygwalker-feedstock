@@ -1,5 +1,5 @@
 {% set name = "pygwalker" %}
-{% set version = "0.3.17" %}
+{% set version = "0.3.18" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pygwalker-{{ version }}.tar.gz
-  sha256: 62d51aec7d283c96e4dc53a807fb1b10c2c599afd192cab196e3f066937a9f70
+  sha256: 888e483c0168caf18bd188b32e4d13c3089e278b58cbbc63a4b24e025bbc1bc2
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --ignore-installed
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -39,6 +39,7 @@ requirements:
     - analytics-python ==2.2.2
     - appdirs
     - pytz
+    - kanaries-track ==0.0.3
 
 test:
   imports:
