@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --ignore-installed
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -40,6 +40,7 @@ requirements:
     - appdirs
     - pytz
     - kanaries-track ==0.0.3
+    - altair >=5.0.0
 
 test:
   imports:
