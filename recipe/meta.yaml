@@ -41,6 +41,7 @@ requirements:
     - pytz
     - kanaries-track ==0.0.3
     - altair >=5.0.0
+    - cachetools
 
 test:
   imports:
