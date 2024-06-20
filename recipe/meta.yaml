@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --ignore-installed
-  number: 1
+  number: 2
 
 requirements:
   host:
@@ -30,7 +30,7 @@ requirements:
     - ipywidgets
     - pydantic
     - psutil
-    - python-duckdb ==0.10.0
+    - python-duckdb >=0.10.0
     - pyarrow
     - sqlglot >=23.15.8
     - requests
