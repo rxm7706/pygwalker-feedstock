@@ -1,5 +1,5 @@
 {% set name = "pygwalker" %}
-{% set version = "0.4.7" %}
+{% set version = "0.4.8.10" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pygwalker-{{ version }}.tar.gz
-  sha256: c2fa0f6808201e1f76239641e773136fea501aa8c887179100ace6d3ef21c590
+  sha256: feb0180978d008e3c43e2dcf3b3512f10781d1df7b2a5af9048e3d835be12449
 
 build:
   noarch: python
@@ -32,15 +32,18 @@ requirements:
     - psutil
     - python-duckdb ==0.10.0
     - pyarrow
-    - sqlglot >=19.0.0
+    - sqlglot >=23.15.8
     - requests
     - arrow
     - sqlalchemy
     - analytics-python ==2.2.2
     - appdirs
     - pytz
-    - kanaries-track ==0.0.3
+    - kanaries-track ==0.0.5
     - cachetools
+    - packaging
+    - numpy <2.0.0
+    - ipylab <=1.0.0
 
 test:
   imports:
