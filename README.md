@@ -9,6 +9,8 @@ Package license: Apache-2.0
 
 Summary: pygwalker: Combining Jupyter Notebook with a Tableau-like UI
 
+pygwalker: turn your data into an interactive UI for data exploration and visualization
+
 Current build status
 ====================
 
@@ -146,4 +148,5 @@ Feedstock Maintainers
 * [@Asm-Def](https://github.com/Asm-Def/)
 * [@gabrielcnr](https://github.com/gabrielcnr/)
 * [@longxiaofei](https://github.com/longxiaofei/)
+* [@rxm7706](https://github.com/rxm7706/)
 
