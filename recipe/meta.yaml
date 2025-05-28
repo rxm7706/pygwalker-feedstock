@@ -11,49 +11,63 @@ source:
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --ignore-installed
-  number: 0
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 1
+  entry_points:
+    - pygwalker = bin.pygwalker_command:main
 
 requirements:
   host:
-    - python >=3.6,<4.0
+    - python {{ python_min }}
     - pip
     - hatchling
     - hatch-jupyter-builder
   run:
-    - python >=3.6,<4.0
-    - ipython
+    - python >={{ python_min }},<4.0
     - jinja2
-    - pandas
-    - typing_extensions
+    - ipython
     - astor
+    - typing_extensions
     - ipywidgets
     - pydantic
     - psutil
-    - python-duckdb >=0.10.0
+    - python-duckdb >=0.10.1,<2.0.0
     - pyarrow
     - sqlglot >=23.15.8
     - requests
     - arrow
     - sqlalchemy
-    - analytics-python ==2.2.2
+    # Requires wasmtime (python-wasmtime) for gw-dsl-parser
+    #- gw-dsl-parser ==0.1.49.1
     - appdirs
+    #- segment-analytics-python ==2.2.3 is called analytics-python
+    - analytics-python ==2.2.3
+    - pandas
     - pytz
     - kanaries-track ==0.0.5
     - cachetools
     - packaging
-    - numpy <2.0.0
+    - numpy
     - ipylab <=1.0.0
-
+    #- quickjs is called python-quickjs 1.19.4
+    - python-quickjs
+    - traitlets
+    - anywidget
 test:
   imports:
     - pygwalker
+  commands:
+    #- pip check
+    # pygwalker 0.4.9.15 requires gw-dsl-parser, which is not installed.
+    - pygwalker --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://pypi.org/project/pygwalker/
   summary: 'pygwalker: Combining Jupyter Notebook with a Tableau-like UI'
+  description: 'pygwalker: turn your data into an interactive UI for data exploration and visualization'
   license: Apache-2.0
   license_file: LICENSE
 
@@ -62,3 +76,4 @@ extra:
     - gabrielcnr
     - Asm-Def
     - longxiaofei
+    - rxm7706
