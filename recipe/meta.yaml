@@ -57,7 +57,11 @@ test:
   imports:
     - pygwalker
   commands:
-    - pip check
+    #- pip check # disabled
+    # gw-dsl-parser 0.1.49.1 has requirement wasmtime>=12.0.0, but you have wasmtime 0.0.0. 
+    # however both wastime-py and gw-dsl-parser are correctly installed.
+    # wasmtime-py:                      40.0.0-py310hdfeec95_1        conda-forge
+    # gw-dsl-parser:                    0.1.49.1-pyhcf101f3_0         conda-forge 
     - pygwalker --help
   requires:
     - pip
